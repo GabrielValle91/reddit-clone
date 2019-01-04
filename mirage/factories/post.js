@@ -7,11 +7,11 @@ export default Factory.extend({
   body(){
     return faker.lorem.sentence();
   },
-  upvotes(){
-    return 3;
+  upvotes(i){
+    return faker.list.random(1, 3, 4, 7, 8, 12, 19, 22, 25, 75, 1022)(i);
   },
-  downvotes(){
-    return 1;
+  downvotes(i){
+    return faker.list.random(2, 5, 7, 9, 11, 14, 19, 26, 32, 64, 746)(i);
   },
   category(){
     return 'Emberjs';
