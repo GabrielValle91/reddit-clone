@@ -7,6 +7,10 @@ export default Controller.extend({
       if (confirmed){
         post.destroyRecord();
       }
+    },
+
+    modifyPost(post){
+      this.transitionToRoute('posts.edit', post.id)
     }
   }
 });

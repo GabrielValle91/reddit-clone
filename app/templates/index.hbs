@@ -4,12 +4,16 @@
       {{#link-to "posts.post" post.id}}
         {{post.title}}
       {{/link-to}}
-      {{#link-to 'posts.edit' post.id}}
-        <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full">
+        <button 
+          onclick={{action 'modifyPost' post}}
+          class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full"
+        >
           Edit
         </button>
-      {{/link-to}}
-      <button onclick={{action 'deletePost' post}} class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 rounded-full">
+      <button 
+        onclick={{action 'deletePost' post}} 
+        class="bg-red hover:bg-red-dark text-white font-bold py-2 px-4 rounded-full"
+      >
         Delete
       </button>
       <ul>

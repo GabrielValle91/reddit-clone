@@ -12,7 +12,7 @@ export default Controller.extend({
         category: 'general'
       });
       post.save().then((resp) => {
-        this.transitionToRoute('post', resp.id);
+        this.transitionToRoute('posts.post', resp.id);
       })
     }
   }

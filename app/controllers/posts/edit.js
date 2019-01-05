@@ -5,7 +5,7 @@ export default Controller.extend({
     editPost(event){
       event.preventDefault();
       this.model.save().then((resp) => {
-        this.transitionToRoute('post', resp.id)
+        this.transitionToRoute('posts.post', resp.id)
       });
     }
   }
